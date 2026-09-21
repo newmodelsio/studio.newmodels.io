@@ -10,6 +10,8 @@ export const home = defineType({
       type: 'string',
       validation: (rule) => rule.required(),
     }),
+
+
     defineField({
       name: 'section',
       title: 'Sections',
@@ -29,17 +31,24 @@ export const home = defineType({
               type: 'url',
             }),
 
+            // defineField({
+            //   name: 'category',
+            //   title: 'Category',
+            //   type: 'string',
+            //   options: {
+            //     list: [
+            //       { title: 'Texts', value: 'texts' },
+            //       { title: 'Lectures', value: 'lectures' },
+            //       { title: 'Special Projects', value: 'special-projects' },
+            //     ],
+            //   },
+            // }),
+
             defineField({
               name: 'category',
               title: 'Category',
-              type: 'string',
-              options: {
-                list: [
-                  { title: 'Texts', value: 'texts' },
-                  { title: 'Lectures', value: 'lectures' },
-                  { title: 'Special Projects', value: 'special-projects' },
-                ],
-              },
+              type: 'reference',
+              to: [{ type: 'category' }],
             }),
 
             defineField({

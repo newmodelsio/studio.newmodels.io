@@ -12,6 +12,9 @@ export const structure: StructureResolver = (S) =>
             .schemaType('home') // must match your schema name
             .documentId('home') // fixed ID = only one page
         ),
+
+      S.documentTypeListItem('category')
+        .title('Categories'),
       S.listItem()
         .title('About')
         .child(
