@@ -33,7 +33,7 @@ export default async function About() {
         <div className="distort tracking-tight text-[24px] md:text-[70px] leading-[1.1] md:leading-[0.95]">
           <Image src={data.bioImage.asset.url}
             width={500}
-            height={500} alt=""
+            height={500} alt="NM Studio portrait"
             className="w-full max-w-[450px] p-5 pl-0 md:pl-5 float-right grayscale contrast-[2]" />
 
           <PortableText value={data.body} />
@@ -50,7 +50,6 @@ export default async function About() {
           <div>Selected Clients</div>
           <div className="md:columns-2  pl-5 [&>p]:-indent-5 text-[24px]  md:text-3xl leading-[1.1]">
             <PortableText value={data.clients} />
-
           </div>
         </div>
 
