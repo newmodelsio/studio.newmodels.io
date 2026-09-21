@@ -1,6 +1,5 @@
 'use client'
 
-import Image from "next/image";
 import Filter from "./Filter";
 import { useState } from "react";
 
@@ -43,7 +42,6 @@ export default function Feed({ content }: { content: any }) {
                   </div>}
               </div>
             ))}
-
         </div>
       </div>
     </>

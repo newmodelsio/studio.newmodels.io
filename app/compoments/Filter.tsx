@@ -4,7 +4,6 @@ export default function Filter({ categories, filter, setFilter }: { categories: 
   return (
 
     <div className="flex gap-5 mb-5 distort">
-
       {categories.map((item: any) => (
         <button key={item.slug} onClick={() => { setFilter(item.slug) }} className={`${(filter == item.slug || filter.includes(item.slug)) && 'active'} group flex items-center gap-2 uppercase cursor-pointer`}>
           <div>

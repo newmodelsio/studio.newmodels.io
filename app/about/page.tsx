@@ -2,11 +2,9 @@
 import { client } from "@/sanity/lib/client";
 
 import Image from "next/image";
-import Filter from "../compoments/Filter";
 import Header from "../compoments/Header";
 import Footer from "../compoments/Footer";
 import { PortableText } from "next-sanity";
-
 
 async function getAboutPage() {
   return await client.fetch(`

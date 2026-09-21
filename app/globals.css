@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-
 ::selection {
   background: #ddd;
   color: white
@@ -21,12 +20,6 @@ strong {
   font-weight: bold;
   font-size: 14px;
 }
-
-/*
-button[data-filter] {
-  opacity: 0.4;
-}
-*/
 
 button[data-filter].active {
   opacity: 1;

@@ -3,7 +3,6 @@ import Footer from "./compoments/Footer";
 import { client } from "@/sanity/lib/client";
 import Feed from "./compoments/Feed";
 
-
 export const revalidate = 10
 
 async function getHomePage() {

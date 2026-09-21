@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function DistortionEffect() {
   return (
     <svg className="absolute top-0 left-0">
