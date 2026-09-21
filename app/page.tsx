@@ -202,14 +202,14 @@ export default function Home() {
     <>
       <Header invert={false} />
 
-      <div className="p-2 pt-10  md:p-5 my-10 distort">
+      <div className="p-2 pt-10  md:p-5 my-10 ">
 
         <Filter setFilter={setFilter} filter={filter} />
 
         <div className="flex flex-col gap-5 md:gap-10 overflow-hidden md:overflow-visible max-w-[90%] md:max-w-[80%] uppercase tracking-tight md:tracking-tighter text-[40px] md:text-[80px] 2xl:text-[90px] leading-[0.93]">
           {content.filter((item) => filter.includes(item.category)).map((item, index) => (
             <div key={index}>
-              {item.url ? <a href={`${item.url}`} target="_blank" className="relative hover:underline decoration-4 md:decoration-auto">
+              {item.url ? <a href={`${item.url}`} target="_blank" className="distort relative hover:underline decoration-4 md:decoration-auto">
                 {item.text}
                 {item.tag &&
                   <span className="h-full relative">

@@ -4,7 +4,7 @@ export default function Filter({ filter, setFilter }: { filter: string; setFilte
 
   return (
 
-    <div className="flex gap-5 mb-5 ">
+    <div className="flex gap-5 mb-5 distort">
 
       <button onClick={() => { setFilter("texts") }} className={`${(filter == 'texts' || filter == 'texts, lectures, special-projects') && 'active'} group flex items-center gap-2 uppercase cursor-pointer`}>
         <div>
