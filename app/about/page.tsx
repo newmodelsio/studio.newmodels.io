@@ -16,7 +16,10 @@ async function getAboutPage() {
       }
     }
   }
-`)
+`, {},
+    {
+      next: { tags: ['about'] } // no revalidate = cache indefinitely until tag is purged
+    })
 }
 
 export default async function About() {
@@ -32,8 +35,9 @@ export default async function About() {
 
         <div className="distort tracking-tight text-[24px] md:text-[70px] leading-[1.1] md:leading-[0.95]">
           <Image src={data.bioImage.asset.url}
-            width={500}
-            height={500} alt="NM Studio portrait"
+            width={330}
+            height={500}
+            alt="NM Studio portrait"
             className="w-full md:max-w-[650px] p-5  float-right grayscale contrast-[2]" />
 
           <PortableText value={data.body} />
