@@ -8,17 +8,18 @@ import { PortableText } from "next-sanity";
 
 async function getAboutPage() {
   return await client.fetch(`
-  *[_type == "about" && _id == "about"][0]{
-  ...,
-  bioImage{
-      asset->{
-        url
+      *[_type == "about" && _id == "about"][0]{
+      ...,
+      bioImage{
+          asset->{
+            url
+          }
+        }
       }
-    }
-  }
-`, {},
+    `,
+    {},
     {
-      next: { tags: ['about'] } // no revalidate = cache indefinitely until tag is purged
+      next: { tags: ['tag'] }
     })
 }
 

@@ -23,7 +23,10 @@ async function getHomePage() {
         "slug": slug.current
       }
     }
-`)
+`, {},
+    {
+      next: { tags: ['tag'] }
+    })
 }
 
 export default async function Home() {
