@@ -20,16 +20,22 @@ export const home = defineType({
         {
           type: 'object',
           fields: [
+            // defineField({
+            //   name: 'title',
+            //   title: 'Text',
+            //   type: 'string',
+            // }),
             defineField({
-              name: 'title',
+              name: 'body',
               title: 'Text',
-              type: 'string',
+              type: 'array',
+              of: [{ type: 'block' }],
             }),
-            defineField({
-              name: 'link',
-              title: 'Link',
-              type: 'url',
-            }),
+            // defineField({
+            //   name: 'link',
+            //   title: 'Link',
+            //   type: 'url',
+            // }),
 
             // defineField({
             //   name: 'category',

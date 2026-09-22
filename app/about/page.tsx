@@ -25,14 +25,16 @@ export default async function About() {
 
   return (
     <div className="bg-black text-white">
+
       <Header invert={true} />
+
       <div className="p-2 md:p-5 uppercase md:mt-10 md:max-w-[90%]">
 
         <div className="distort tracking-tight text-[24px] md:text-[70px] leading-[1.1] md:leading-[0.95]">
           <Image src={data.bioImage.asset.url}
             width={500}
             height={500} alt="NM Studio portrait"
-            className="w-full max-w-[450px] p-5 pl-0 md:pl-5 float-right grayscale contrast-[2]" />
+            className="w-full md:max-w-[650px] p-5  float-right grayscale contrast-[2]" />
 
           <PortableText value={data.body} />
         </div>
@@ -52,7 +54,9 @@ export default async function About() {
         </div>
 
       </div>
+
       <Footer />
+
     </div>
   );
 }

@@ -1,5 +1,6 @@
 'use client'
 
+import { PortableText } from "next-sanity";
 import Filter from "./Filter";
 import { useState } from "react";
 
@@ -22,7 +23,7 @@ export default function Feed({ content }: { content: any }) {
             .map((item: any, index: any) => (
               <div key={index}>
                 {item.link ? <a href={`${item.link}`} target="_blank" className="distort relative hover:underline decoration-4 md:decoration-auto">
-                  {item.title}
+                  <PortableText value={item.body} />
                   {item.tag &&
                     <span className="h-full relative">
                       <span className="absolute m-2 p-1 bg-black text-white text-[14px] tracking-normal">
@@ -38,7 +39,7 @@ export default function Feed({ content }: { content: any }) {
                     <span className="text-black bg-black inline-block my-1 mr-5">XXX</span>
                     <span className="text-black bg-black inline-block my-1 mr-5">XXX</span>
                     <span className="text-black bg-black inline-block my-1 mr-5">XXXX</span>
-                    <span className="text-black bg-black inline-block my-1 mr-5"> {item.text}</span>
+                    <span className="text-black bg-black inline-block my-1 mr-5">{item.title}</span>
                   </div>}
               </div>
             ))}
