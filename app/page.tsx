@@ -25,7 +25,7 @@ async function getHomePage() {
     }
 `, {},
     {
-      next: { tags: ['tag'] }
+      next: { tags: ['sanity'] }
     })
 }
 

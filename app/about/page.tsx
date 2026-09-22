@@ -19,7 +19,7 @@ async function getAboutPage() {
     `,
     {},
     {
-      next: { tags: ['tag'] }
+      next: { tags: ['sanity'] }
     })
 }
 

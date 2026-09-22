@@ -3,6 +3,6 @@ import { revalidatePath } from "next/cache"
 import { revalidateTag } from "next/cache"
 
 export async function GET(request: NextRequest) {
-    revalidateTag("tag", "max")
+    revalidateTag("sanity", "max")
     return NextResponse.json({ msg: "Hello from server" })
 }
