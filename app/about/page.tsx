@@ -53,7 +53,7 @@ export default async function About() {
 
         <div className="distort uppercase gap-6 mb-2 my-14 md:my-20">
           <div>Selected Clients</div>
-          <div className="md:columns-2  pl-5 [&>p]:-indent-5 text-[24px]  md:text-3xl leading-[1.1]">
+          <div className="md:columns-2 pl-5 [&>p]:-indent-5 text-[24px] md:text-3xl leading-[1.1]">
             <PortableText value={data.clients} />
           </div>
         </div>
