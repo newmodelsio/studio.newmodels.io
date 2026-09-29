@@ -12,7 +12,13 @@ async function getAboutPage() {
       ...,
       bioImage{
           asset->{
-            url
+            url,
+            metadata {
+              dimensions {
+                width,
+                height
+              }
+            }
           }
         }
       }
@@ -22,6 +28,7 @@ async function getAboutPage() {
       next: { tags: ['sanity'] }
     })
 }
+
 
 export default async function About() {
 
@@ -36,8 +43,8 @@ export default async function About() {
 
         <div className="distort tracking-tight text-[24px] md:text-[70px] leading-[1.1] md:leading-[0.95]">
           <Image src={data.bioImage.asset.url}
-            width={330}
-            height={500}
+            width={data.bioImage.asset.metadata.dimensions.width}
+            height={data.bioImage.asset.metadata.dimensions.height}
             alt="NM Studio portrait"
             className="w-full md:max-w-[650px] p-5  float-right grayscale contrast-[2]" />
 

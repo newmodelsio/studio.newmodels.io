@@ -22,16 +22,19 @@ export default function Feed({ content }: { content: any }) {
             .filter((item: any) => filter.includes(item.category?.slug))
             .map((item: any, index: any) => (
               <div key={index}>
-                {item.link ? <a href={`${item.link}`} target="_blank" className="distort relative hover:underline decoration-4 md:decoration-auto">
-                  <PortableText value={item.body} />
-                  {item.tag &&
-                    <span className="h-full relative">
-                      <span className="absolute m-2 p-1 bg-black text-white text-[14px] tracking-normal">
-                        {item.tag}
+                {item.link ?
+                  <div className="distort relative hover:underline decoration-4 md:decoration-auto">
+                    {/* <a href={`${item.link}`} target="_blank" className="distort relative hover:underline decoration-4 md:decoration-auto"> */}
+                    <PortableText value={item.body} />
+                    {item.tag &&
+                      <span className="h-full relative">
+                        <span className="absolute m-2 p-1 bg-black text-white text-[14px] tracking-normal">
+                          {item.tag}
+                        </span>
                       </span>
-                    </span>
-                  }
-                </a>
+                    }
+                    {/* </a> */}
+                  </div>
                   :
                   <div className="distort">
                     <span className="text-black bg-black inline-block my-1 mr-5">XXXXXXX</span>
