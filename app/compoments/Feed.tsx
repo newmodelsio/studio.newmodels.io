@@ -24,11 +24,20 @@ export default function Feed({ content }: { content: any }) {
               <div key={index}>
                 {item.link ?
                   <div className="distort relative hover:underline decoration-4 md:decoration-auto">
-                    {/* <a href={`${item.link}`} target="_blank" className="distort relative hover:underline decoration-4 md:decoration-auto"> */}
-                    <PortableText value={item.body} />
+                    <PortableText
+                      value={item.body}
+                      components={{
+                        block: {
+                          normal: ({ children }) => <>{children}</>,
+                        },
+                        marks: {
+                          'strike-through': ({ children }) => <s>{children}</s>,
+                        },
+                      }}
+                    />
                     {item.tag &&
                       <span className="h-full relative">
-                        <span className="absolute m-2 p-1 bg-black text-white text-[14px] tracking-normal">
+                        <span className="absolute m-2 p-1 bg-black text-white text-[12px] tracking-wider">
                           {item.tag}
                         </span>
                       </span>

@@ -46,7 +46,7 @@ export default async function About() {
             width={data.bioImage.asset.metadata.dimensions.width}
             height={data.bioImage.asset.metadata.dimensions.height}
             alt="NM Studio portrait"
-            className="w-full md:max-w-[650px] p-5  float-right grayscale contrast-[2]" />
+            className="w-full md:max-w-[650px] p-5  float-right grayscale contrast-[2] fadeIn" />
 
           <PortableText value={data.body} />
         </div>
