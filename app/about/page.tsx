@@ -36,6 +36,9 @@ export default async function About() {
 
   return (
     <div className="bg-black text-white">
+      <style>{`
+        html { background: #000; }
+      `}</style>
 
       <Header invert={true} />
 
