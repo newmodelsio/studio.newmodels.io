@@ -31,6 +31,15 @@ export default function Feed({ content }: { content: any }) {
                           normal: ({ children }) => <>{children}</>,
                         },
                         marks: {
+                          link: ({ children, value }) => (
+                            <a
+                              href={value?.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              {children}
+                            </a>
+                          ),
                           'strike-through': ({ children }) => <s>{children}</s>,
                         },
                       }}
