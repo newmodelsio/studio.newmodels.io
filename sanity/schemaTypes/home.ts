@@ -20,11 +20,11 @@ export const home = defineType({
         {
           type: 'object',
           fields: [
-            // defineField({
-            //   name: 'title',
-            //   title: 'Text',
-            //   type: 'string',
-            // }),
+            defineField({
+              name: 'title',
+              title: 'Text',
+              type: 'string',
+            }),
             defineField({
               name: 'body',
               title: 'Text',

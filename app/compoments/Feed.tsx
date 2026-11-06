@@ -10,6 +10,8 @@ export default function Feed({ content }: { content: any }) {
     content.categories.map((category: any) => category.slug)
   )
 
+  console.log(content.home.section)
+
   return (
     <>
 
@@ -22,7 +24,7 @@ export default function Feed({ content }: { content: any }) {
             .filter((item: any) => filter.includes(item.category?.slug))
             .map((item: any, index: any) => (
               <div key={index}>
-                {item.redacted ?
+                {!item.redacted ?
                   <div className="distort relative hover:underline decoration-4 md:decoration-auto">
                     <PortableText
                       value={item.body}
