@@ -10,8 +10,6 @@ export default function Feed({ content }: { content: any }) {
     content.categories.map((category: any) => category.slug)
   )
 
-  console.log(content.home.section)
-
   return (
     <>
 

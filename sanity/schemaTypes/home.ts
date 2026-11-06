@@ -22,7 +22,7 @@ export const home = defineType({
           fields: [
             defineField({
               name: 'title',
-              title: 'Text',
+              title: 'Title',
               type: 'string',
             }),
             defineField({
