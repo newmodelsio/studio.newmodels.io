@@ -31,6 +31,13 @@ export const home = defineType({
               type: 'array',
               of: [{ type: 'block' }],
             }),
+            defineField({
+              name: 'redacted',
+              title: 'Redacted',
+              type: 'boolean',
+              initialValue: false,
+            }),
+
             // defineField({
             //   name: 'link',
             //   title: 'Link',
